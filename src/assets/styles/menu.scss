@@ -1,0 +1,22 @@
+.menuVertical {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	height: 100vh;
+	position: fixed;
+	.disabled {
+		color: $white;
+		padding: 0;
+		display: flex;
+		max-height: 50px;
+		span {
+			font-weight: bold;
+			font-size: 2rem;
+		}
+	}
+	.nav {
+		a {
+			color: $white;
+		}
+	}
+}

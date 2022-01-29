@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;400;700&display=swap');
+html {
+	box-sizing: border-box;
+}
+*,
+*::after,
+*::before {
+	box-sizing: inherit;
+}
+body {
+	font-family: 'Work Sans', sans-serif;
+	background-color: $blue;
+	color: $white;
+	.movingSection {
+		min-height: 100vh;
+		z-index: 9;
+		position: relative;
+	}
+}
+a,
+button {
+	font-family: 'Work Sans', sans-serif;
+	color: $blueLight;
+	&:hover {
+		color: $blueLighten;
+		font-weight: bold;
+	}
+}
+
+.pink {
+	color: $pink;
+}

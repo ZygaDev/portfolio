@@ -1,0 +1,8 @@
+@import './mixin.scss';
+.Info {
+	@include containerLook;
+
+	h3 {
+		text-align: left;
+	}
+}

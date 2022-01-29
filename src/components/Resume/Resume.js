@@ -1,11 +1,13 @@
 import React from 'react';
-import ResumeItem from 'components/ResumeItem/ResumeItem';
 
 const Resume = () => {
 	return (
-		<>
-			<ResumeItem></ResumeItem>
-		</>
+		<div>
+			<em>Resume</em>
+			<h2>Find me on: linkedin github Get my resume:</h2>
+			<a>cv pl</a>
+			<a>cv eng</a>
+		</div>
 	);
 };
 
