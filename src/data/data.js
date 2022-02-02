@@ -5,8 +5,9 @@ export const informations = [
 		button: "Let's work together!",
 		description: "I'm  a Frontend Developer",
 		aboutTitle: "I'm a developer working from home",
-		about: "Hi! Glad to see you! I'm Amanda, Frontend Developer from 2019. I am Master of Engineering from Poland.",
+		about: "Hi! Glad to see you! I'm Amanda, Frontend Developer from 2019. I am Master of Engineering from Poland.I am Bolby Doe, web developer from London, United Kingdom. I have rich experience in web site design and building and customization, also I am good at WordPress.",
 		created: '© 2022  Created by Amanda ✨',
+		html: '<code><span class="c-r">&lt;div</span> <span class="c-y">class</span><span class="c-w">=</span><span class="c-g">"rect"</span><span class="c-r">&gt;&lt;/div&gt;</span></div></code>',
 	},
 ];
 
@@ -46,10 +47,6 @@ export const skills = [
 		url: 'devicon-babel-plain',
 	},
 	{
-		name: 'Chrome',
-		url: 'devicon-chrome-plain-wordmark',
-	},
-	{
 		name: 'Git',
 		url: 'devicon-git-plain-wordmark',
 	},
@@ -66,10 +63,10 @@ export const skills = [
 		name: 'npm',
 		url: 'devicon-npm-original-wordmark',
 	},
-	{
-		name: 'Rasberry',
-		url: 'devicon-raspberrypi-line-wordmark',
-	},
+	// {
+	// 	name: 'Rasberry',
+	// 	url: 'devicon-raspberrypi-line-wordmark',
+	// },
 	{
 		name: 'Sass',
 		url: 'devicon-sass-original',

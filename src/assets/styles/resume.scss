@@ -1,0 +1,134 @@
+@import './mixin.scss';
+.resume {
+	@include containerLook;
+
+	.row {
+		width: 100%;
+		height: 100vh;
+		.col {
+			position: relative;
+		}
+	}
+	.social {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		width: 100%;
+		h2 {
+			padding-bottom: 5rem;
+		}
+		.icons {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			grid-gap: 1rem;
+			gap: 1rem;
+			pointer-events: none;
+			a {
+				svg {
+					padding: 1rem;
+					animation: icon3d 200ms 10;
+					color: $white;
+					height: 7rem;
+					z-index: 9;
+					pointer-events: all;
+					&:hover {
+						animation: icon3d 200ms infinite;
+						cursor: pointer;
+					}
+				}
+				&:nth-child(-n + 2) {
+					text-align: left;
+				}
+			}
+		}
+	}
+
+	.icons:hover > svg:hover {
+		animation: icon3d 200ms infinite;
+		cursor: pointer;
+	}
+	@keyframes icon3d {
+		0% {
+			filter: drop-shadow(0px 3px 3px $pink);
+			color: $blueLight;
+		}
+		100% {
+			filter: drop-shadow(5px 4px 3px $pink);
+			color: $blueLight;
+		}
+	}
+}
+
+.code {
+	position: absolute;
+	width: 290px;
+	height: 230px;
+	background: $blueLighten;
+	box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.5);
+	border-radius: 6px;
+	z-index: 5;
+	header {
+		display: grid;
+		grid-template-columns: 36px auto 36px;
+		align-items: center;
+
+		svg {
+			margin: 10px;
+			color: $blueLight;
+			height: 2rem;
+		}
+		h1 {
+			font-family: Lato, sans-serif;
+			font-weight: 900;
+			font-size: 14px;
+			letter-spacing: 1.57px;
+			color: $white;
+			margin: 0;
+		}
+	}
+	&-html {
+		right: 150px;
+		top: 110px;
+	}
+	&-css {
+		top: 250px;
+		position: absolute;
+		left: 0%;
+		top: 50%;
+		transform: translate(0%, -50%);
+	}
+	&-js {
+		top: 500px;
+		right: 150px;
+	}
+	.code-content {
+		margin: 0 10px 10px;
+		text-align: left;
+		color: $white;
+		.c-w {
+			color: $white;
+		}
+		.c-p {
+			color: $pink;
+		}
+		.fw {
+			font-weight: bold;
+		}
+	}
+	&-css {
+		.line-3 .c-p::after {
+			content: '';
+			width: 0.5rem;
+			height: 2rem;
+			background: $pink;
+			display: block;
+			animation: cursor-blink 1.5s steps(2) infinite;
+		}
+	}
+}
+@keyframes cursor-blink {
+	0% {
+		opacity: 0;
+	}
+}

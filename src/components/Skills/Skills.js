@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { skills as skillData } from 'data/data';
-import { Container, Row, Col, Button } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
+import { ReactComponent as Three } from 'assets/icons/3 (1).svg';
+import { ReactComponent as Four } from 'assets/icons/4 (1).svg';
 const mockAPI = (success) => {
 	return new Promise((resolve, reject) => {
 		setTimeout(() => {
@@ -26,17 +28,24 @@ const Skills = () => {
 
 	return (
 		<>
-			<Container className='Skills'>
+			<Container fluid className='Skills' id='skills'>
+				<Three className='layer' data-speed='-7'></Three>
+				<Four className='layer' data-speed='2'></Four>
 				<Row>
-					<Col>
-						<em>Skills</em>
-
-						<h2>My Toolbox & Things I Can Do</h2>
-					</Col>
-					<Col className='w-50'>
-						{users.map((item, i) => (
-							<i key={i} className={item.url}></i>
-						))}{' '}
+					<Col sm={10}>
+						<div className='container'>
+							<div className='cards'>
+								{users.map((item, i) => (
+									<div className='card ' key={i}>
+										<i className={item.url}></i>
+									</div>
+								))}{' '}
+							</div>
+						</div>
+					</Col>{' '}
+					<Col sm={2}>
+						<h2 className='rotate'>My</h2>
+						<h2> Toolbox</h2>
 					</Col>
 				</Row>
 			</Container>
