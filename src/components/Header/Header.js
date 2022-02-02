@@ -34,16 +34,24 @@ class Header extends React.Component {
 								</h1>
 							</Col>
 							<Col>
-								<TypeAnimation
-									cursor={true}
-									sequence={['Master of Engineering', 2000, 'Frontend developer']}
-									wrapper='h1'
-									repeat={Infinity}
-								/>
+								<div style={{ height: '12rem' }}>
+									<TypeAnimation
+										cursor={true}
+										sequence={[
+											'Master of Engineering',
+											2000,
+											'Frontend developer',
+											2000,
+											'Web developer',
+										]}
+										wrapper='h1'
+										repeat={Infinity}
+									/>
+								</div>
 							</Col>
 							<Col>
 								<Button variant='primary' size='lg'>
-									{item.button}
+									<a href='#social'> {item.button}</a>
 								</Button>{' '}
 								<section className='scroll'>
 									<a href='#info'>

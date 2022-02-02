@@ -22,34 +22,34 @@ class Resume extends React.Component {
 						<Col sm={3}>
 							<FontAwesomeIcon icon={faCoffee}></FontAwesomeIcon>
 							<div className='count' data-target='523'>
-								0
+								523
 							</div>
 							<p>Cups of coffee</p>
 						</Col>
 						<Col sm={3}>
 							<FontAwesomeIcon icon={faCode}></FontAwesomeIcon>
 							<div className='count' data-target='15'>
-								0
+								15
 							</div>
 							<p>Website Complete</p>
 						</Col>
 						<Col sm={3}>
 							<FontAwesomeIcon icon={faShoppingCart}></FontAwesomeIcon>
 							<div className='count' data-target='10'>
-								0
+								10
 							</div>
 							<p>Online Shops Complete</p>
 						</Col>
 						<Col sm={3}>
 							<FontAwesomeIcon icon={faCouch}></FontAwesomeIcon>
 							<div className='count' data-target='440'>
-								0
+								440
 							</div>
-							<p>Hours of watching Friends</p>
+							<p>Hours of watching 'Friends'</p>
 						</Col>
 					</Row>
 				</Container>{' '}
-				<Container fluid className='resume'>
+				<Container fluid className='resume' id='resume'>
 					<Row>
 						<Col className='illustration-editor'>
 							<div className='code-blocks'>
@@ -129,7 +129,7 @@ class Resume extends React.Component {
 							</div>
 						</Col>
 						<Col>
-							<div className='social'>
+							<div className='social' id='social'>
 								<h2>Let's talk!</h2>
 								<div className='icons'>
 									<a href='https://github.com/ZygaDev/'>

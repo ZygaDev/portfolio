@@ -8,30 +8,40 @@ function parallax(e) {
 	});
 }
 
-var observer = new IntersectionObserver(
-	function (entries) {
-		if (entries[0].isIntersecting === true) {
-			const counters = document.querySelectorAll('.count');
-			// Main function
-			for (let n of counters) {
-				const updateCount = () => {
-					const target = +n.getAttribute('data-target');
-					const count = +n.innerText;
-					const speed = 10; // change animation speed here
-					const inc = target / speed;
-					if (count < target) {
-						n.innerText = Math.ceil(count + inc);
-						setTimeout(updateCount, 1);
-					} else {
-						n.innerText = target;
-					}
-				};
-				updateCount();
-			}
-		} else {
-		}
-	},
-	{ threshold: [1] }
-);
+document.addEventListener('DOMContentLoaded', function (event) {
+	const showNavbar = (toggleId, navId, bodyId, headerId) => {
+		const toggle = document.getElementById(toggleId),
+			nav = document.getElementById(navId),
+			bodypd = document.getElementById(bodyId),
+			headerpd = document.getElementById(headerId);
 
-observer.observe(document.querySelector('#counter'));
+		// Validate that all variables exist
+		if (toggle && nav && bodypd && headerpd) {
+			toggle.addEventListener('click', () => {
+				// show navbar
+				nav.classList.toggle('show');
+				// change icon
+				toggle.classList.toggle('bx-x');
+				// add padding to body
+				bodypd.classList.toggle('body-pd');
+				// add padding to header
+				headerpd.classList.toggle('body-pd');
+			});
+		}
+	};
+
+	showNavbar('header-toggle', 'nav-bar', 'body-pd', 'header');
+
+	/*===== LINK ACTIVE =====*/
+	const linkColor = document.querySelectorAll('.nav_link');
+
+	function colorLink() {
+		if (linkColor) {
+			linkColor.forEach((l) => l.classList.remove('active'));
+			this.classList.add('active');
+		}
+	}
+	linkColor.forEach((l) => l.addEventListener('click', colorLink));
+
+	// Your code to run since DOM is loaded and ready
+});

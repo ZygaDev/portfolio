@@ -89,3 +89,17 @@
 		}
 	}
 }
+
+@media (max-width: 1100px) {
+	.Skills {
+		height: auto;
+		.row {
+			flex-direction: column-reverse;
+			.container {
+				.cards {
+					grid-template-columns: repeat(3, 1fr);
+				}
+			}
+		}
+	}
+}

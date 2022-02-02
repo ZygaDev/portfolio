@@ -36,10 +36,10 @@ const Root = () => {
 	return (
 		<Container fluid>
 			<Row>
-				<Col sm={3}>
+				<Col lg={3}>
 					<Menu></Menu>
 				</Col>
-				<Col sm={9} className='movingSection'>
+				<Col lg={9} className='movingSection'>
 					<Header></Header>
 
 					<Info></Info>

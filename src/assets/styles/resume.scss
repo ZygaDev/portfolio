@@ -89,17 +89,16 @@
 	}
 	&-html {
 		right: 150px;
-		top: 110px;
+		top: 5rem;
 	}
 	&-css {
-		top: 250px;
 		position: absolute;
 		left: 0%;
 		top: 50%;
 		transform: translate(0%, -50%);
 	}
 	&-js {
-		top: 500px;
+		bottom: 5rem;
 		right: 150px;
 	}
 	.code-content {
@@ -130,5 +129,24 @@
 @keyframes cursor-blink {
 	0% {
 		opacity: 0;
+	}
+}
+
+@media (max-width: 1100px) {
+	.resume {
+		height: auto;
+		.row {
+			height: 100%;
+			flex-direction: column;
+			.code,
+			.social {
+				position: relative;
+				top: unset;
+				right: unset;
+				left: unset;
+				transform: unset;
+				bottom: unset;
+			}
+		}
 	}
 }
