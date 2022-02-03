@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { informations } from 'data/data';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import { ReactComponent as Avatar } from 'assets/icons/avatar.svg';
@@ -9,7 +9,7 @@ import { ReactComponent as Four } from 'assets/icons/4 (1).svg';
 import { ReactComponent as Five } from 'assets/icons/5 (1).svg';
 import { ReactComponent as Seven } from 'assets/icons/7 (1).svg';
 import { ReactComponent as Eight } from 'assets/icons/8.svg';
-import TypeAnimation from 'react-type-animation';
+import Typical from 'react-typical';
 
 class Header extends React.Component {
 	render() {
@@ -34,32 +34,26 @@ class Header extends React.Component {
 								</h1>
 							</Col>
 							<Col>
-								<div style={{ height: '12rem' }}>
-									<TypeAnimation
-										cursor={true}
-										sequence={[
-											'Master of Engineering',
-											2000,
-											'Frontend developer',
-											2000,
-											'Web developer',
+								<h1 className='typing'>
+									I'm
+									<Typical
+										steps={[
+											' Master of Engineering',
+											1000,
+											' Frontend developer',
+											1000,
+											' Web developer',
+											1000,
 										]}
-										wrapper='h1'
-										repeat={Infinity}
+										loop={10}
+										wrapper='span'
 									/>
-								</div>
+								</h1>
 							</Col>
 							<Col>
 								<Button variant='primary' size='lg'>
 									<a href='#social'> {item.button}</a>
 								</Button>{' '}
-								<section className='scroll'>
-									<a href='#info'>
-										<span></span>
-										<span></span>
-										<span></span>
-									</a>
-								</section>
 							</Col>
 							<Col> </Col>
 						</Row>

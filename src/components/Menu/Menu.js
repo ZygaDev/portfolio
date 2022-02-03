@@ -11,10 +11,16 @@ function menu(params) {
 	menuV.classList.toggle('opened');
 	btn.setAttribute('aria-expanded', btn.classList.contains('opened'));
 }
-function hideMenu() {
-	let btn = document.querySelector('.menu');
-	btn.classList.toggle('opened');
-}
+
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+	anchor.addEventListener('click', function (e) {
+		e.preventDefault();
+
+		document.querySelector(this.getAttribute('href')).scrollIntoView({
+			behavior: 'smooth',
+		});
+	});
+});
 
 class Menu extends React.Component {
 	render() {

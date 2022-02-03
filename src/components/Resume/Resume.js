@@ -93,7 +93,7 @@ class Resume extends React.Component {
 													<span className='c-y'> $white;</span>{' '}
 												</p>
 												<br />
-												<p className='line-3'>
+												<p>
 													<span className='fw'>height: </span>{' '}
 													<span className='c-o'>7rem;</span>
 													<br />
@@ -122,6 +122,10 @@ class Resume extends React.Component {
 												<span className='c-w'>{`{ FontAwesomeIcon } `}</span>
 												<span className='c-p'>{` from `}</span>{' '}
 												<span className='c-w'>{`  '@fortawesome/react-fontawesome';`}</span>
+												<p className='line-3'>
+													{' '}
+													<span className='c-p'>{``}</span>
+												</p>
 											</code>
 										}
 									</div>
