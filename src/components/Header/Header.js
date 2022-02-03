@@ -11,6 +11,26 @@ import { ReactComponent as Seven } from 'assets/icons/7 (1).svg';
 import { ReactComponent as Eight } from 'assets/icons/8.svg';
 import Typical from 'react-typical';
 
+const TypingAnimation = React.memo(
+	() => {
+		return (
+			<Typical
+				steps={[
+					' Master of Engineering',
+					1000,
+					' Frontend developer',
+					1000,
+					' Web developer',
+					1000,
+				]}
+				loop={10}
+				wrapper='span'
+			/>
+		);
+	},
+	(props, prevProp) => true
+);
+
 class Header extends React.Component {
 	render() {
 		return (
@@ -36,24 +56,15 @@ class Header extends React.Component {
 							<Col>
 								<h1 className='typing'>
 									I'm
-									<Typical
-										steps={[
-											' Master of Engineering',
-											1000,
-											' Frontend developer',
-											1000,
-											' Web developer',
-											1000,
-										]}
-										loop={10}
-										wrapper='span'
-									/>
+									<TypingAnimation></TypingAnimation>
 								</h1>
 							</Col>
 							<Col>
-								<Button variant='primary' size='lg'>
-									<a href='#social'> {item.button}</a>
-								</Button>{' '}
+								<a href='#social'>
+									<Button variant='primary' size='lg'>
+										{item.button}
+									</Button>{' '}
+								</a>
 							</Col>
 							<Col> </Col>
 						</Row>
