@@ -3,7 +3,13 @@ import { Nav } from 'react-bootstrap';
 import { informations } from 'data/data';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome, faIdCardAlt, faFileCode, faInfoCircle } from '@fortawesome/free-solid-svg-icons';
+import {
+	faHome,
+	faIdCardAlt,
+	faFileCode,
+	faInfoCircle,
+	faFile,
+} from '@fortawesome/free-solid-svg-icons';
 function menu(params) {
 	let btn = document.querySelector('.menu');
 	let menuV = document.querySelector('.menuVertical');

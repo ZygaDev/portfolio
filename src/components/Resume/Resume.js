@@ -11,6 +11,7 @@ import {
 	faEnvelope,
 	faCog,
 	faChevronDown,
+	faFile,
 } from '@fortawesome/free-solid-svg-icons';
 
 class Resume extends React.Component {
@@ -147,6 +148,19 @@ class Resume extends React.Component {
 									</a>
 									<a href='mailto:amandazygmanska@gmail.com'>
 										<FontAwesomeIcon icon={faEnvelope} />
+									</a>
+								</div>
+								<h2>Or check my resume:</h2>
+								<div className='icons'>
+									<a href='/resume.pdf' className='resumeEng'>
+										<div className='resumeEng-box'>
+											<span>ENG</span> <FontAwesomeIcon icon={faFile} />
+										</div>
+									</a>
+									<a href='/cv.pdf' className='resumeEng'>
+										<div className='resumeEng-box'>
+											<span>PL</span> <FontAwesomeIcon icon={faFile} />
+										</div>
 									</a>
 								</div>
 							</div>

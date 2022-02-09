@@ -41,6 +41,40 @@
 					text-align: left;
 				}
 			}
+			.resumeEng {
+				&-box {
+					width: min-content;
+					height: 100%;
+					position: relative;
+					span {
+						position: absolute;
+						left: 50%;
+						top: 50%;
+						transform: translate(-50%, -50%);
+						font-size: 2rem;
+						font-weight: bold;
+						color: $blue;
+						z-index: 99999;
+					}
+				}
+			}
+			.resumePl {
+				&-box {
+					width: min-content;
+					height: 100%;
+					position: relative;
+					span {
+						position: absolute;
+						left: 50%;
+						top: 50%;
+						transform: translate(-50%, -50%);
+						font-size: 2rem;
+						font-weight: bold;
+						color: $blue;
+						z-index: 99999;
+					}
+				}
+			}
 		}
 	}
 
