@@ -1,53 +1,27 @@
-import React, { useState, useEffect } from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
-import { informations as infoData } from 'data/data';
-import Header from 'components/Header/Header';
-import Menu from 'components/Menu/Menu';
-import Info from 'components/Info/Info';
+import React from 'react';
+import Header from '../components/organism/Header/Header';
+import About from '../components/organism/About/About';
+import SkillsList from 'components/organism/SkillsList/SkillsList';
+import Resume from '../components/organism/Resume/Resume';
+import { GlobalStyle } from 'assets/styles/globalStyle';
+import { ThemeProvider } from 'styled-components';
+import { theme } from 'assets/styles/theme';
+import { Wrapper } from './Root.styles';
+import Menu from 'components/organism/Menu/Menu';
 
-import Skills from 'components/Skills/Skills';
-import Resume from 'components/Resume/Resume';
-
-const mockAPI = (success) => {
-	return new Promise((resolve, reject) => {
-		setTimeout(() => {
-			if (infoData) {
-				resolve([...infoData]);
-			} else {
-				reject({ message: 'Error' });
-			}
-		});
-	});
-};
 const Root = () => {
-	const [users, setUsers] = useState([]);
-	const [isLoading, setLoadingState] = useState([]);
-
-	useEffect(() => {
-		setLoadingState(true);
-		mockAPI()
-			.then((data) => {
-				setLoadingState(false);
-				setUsers(data);
-			})
-			.catch((err) => console.log(err));
-	}, []);
-
 	return (
-		<Container fluid>
-			<Row>
-				<Col lg={3}>
-					<Menu></Menu>
-				</Col>
-				<Col lg={9} className='movingSection'>
-					<Header></Header>
+		<ThemeProvider theme={theme}>
+			<GlobalStyle />
 
-					<Info></Info>
-					<Skills></Skills>
-					<Resume></Resume>
-				</Col>
-			</Row>
-		</Container>
+			<Menu />
+			<Wrapper>
+				<Header></Header>
+				<About></About>
+				<SkillsList></SkillsList>
+				<Resume></Resume>
+			</Wrapper>
+		</ThemeProvider>
 	);
 };
 export default Root;
